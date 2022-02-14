@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>IndustrialServicesSystem.Application</RootNamespace>
+    <AssemblyName>IndustrialServicesSystem.Application</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="TblSmstemplate\**" />
+    <EmbeddedResource Remove="TblSmstemplate\**" />
+    <None Remove="TblSmstemplate\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="FluentValidation" Version="8.6.2" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.Text.Json" Version="4.7.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Advertisements\Commands\EditAdvertisement\" />
+    <Folder Include="Advertisements\Commands\DeleteAdvertisement\" />
+    <Folder Include="Advertisements\Queries\GetAdvertisement\" />
+    <Folder Include="Clients\Queries\" />
+    <Folder Include="CodeGroups\Commands\" />
+    <Folder Include="Codes\Commands\EditCode\" />
+    <Folder Include="Complaints\Commands\DeleteComplaint\" />
+    <Folder Include="Complaints\Queries\GetComplaint\" />
+    <Folder Include="ContactUsMessages\Commands\DeleteMessage\" />
+    <Folder Include="ContactUsMessages\Queries\GetContactUsMessage\" />
+    <Folder Include="Discounts\Commands\CreatePrivateDiscount\" />
+    <Folder Include="Discounts\Commands\ChangePublicDiscountActiveness\" />
+    <Folder Include="Discounts\Commands\ChangePrivateDiscountActiveness\" />
+    <Folder Include="Discounts\Commands\DeletePrivateDiscount\" />
+    <Folder Include="Discounts\Queries\GetPrivateDiscounts\" />
+    <Folder Include="Cities\" />
+    <Folder Include="Provinces\" />
+    <Folder Include="Suggestions\Commands\DeleteSuggestion\" />
+    <Folder Include="Suggestions\Queries\GetSuggestion\" />
+    <Folder Include="Tags\Commands\" />
+    <Folder Include="Common\Mappings\" />
+    <Folder Include="Users\Queries\" />
+  </ItemGroup>
+
+</Project>
